@@ -1,0 +1,20 @@
+<script>     
+
+        function calcularMedia(){
+            let n1 = parseInt(prompt('Digite a primeira nota'));
+            let n2 = parseInt(prompt('Digite a segunda nota'));
+            let media = (n1 + n2) / 2;
+
+            if(media >= 7){
+                if(media == 10)
+                    alert('Aprovado com distinção')
+                        else
+                            alert('Aprovado');   
+            }
+            if(media < 7){
+               alert('Reprovado');
+            }
+        } 
+        calcularMedia();
+
+</script>

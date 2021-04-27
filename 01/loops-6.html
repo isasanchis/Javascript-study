@@ -1,0 +1,19 @@
+<script>     
+
+    var arr = [-10, -20, -30, 45];
+
+    function somaArr(array){
+        var soma = 0;
+        for(var i = 0; i < array.length; i++){
+            soma += arr[i];
+        }
+        return soma;
+    };
+
+    var somaArray = somaArr(arr);
+
+    var media = somaArray / arr.length;
+    
+    document.write(somaArray + '<br>' + media);
+
+</script>

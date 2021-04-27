@@ -1,0 +1,51 @@
+<script>
+    // function isPrime(num){
+    //     for(var i = 2; i < num / 2; i++){
+    //         if(num % i === 0)
+    //             return false;
+    //     }
+    //     return num > 1;
+    // }
+    
+    // function maiorNumero() {
+    //     for(var i = 600851475143; i >= 1; i--){
+    //         if(isPrime(i)){
+    //             return i
+    //         }
+    //     }
+    // }
+
+    // console.log(maiorNumero())
+
+//     (function euler003() {
+//         // starting index (first prime)
+//         var i = 2;
+//         var num = 100;
+
+//         while (num > i) {
+//             if (num % i === 0) {
+//             num = num / i;
+//             }
+
+//             i++;
+//         }
+
+//   console.log(i);
+//   return i;
+// }());
+
+function divide(num) {
+    var i = 2;
+    while(num > i){
+        if(num % i == 0){
+            num = num / i
+            i = 2;
+        } else {
+            i++
+        }
+    }
+    return i;
+}
+
+       
+</script>
