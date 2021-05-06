@@ -1,0 +1,16 @@
+<script>
+    function calculo(){
+        var sum = 0;
+        var n1 = 1; 
+        var n2 = 2;
+        while(n1 < 4000000){
+            if(n1 % 2 == 0)
+                sum += n1;
+            var n3 = n1 + n2;
+                n1 = n2;
+                n2 = n3;
+        }
+        return sum;
+    }
+    console.log(calculo())
+</script>

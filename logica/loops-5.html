@@ -1,0 +1,18 @@
+<script>     
+
+    var arr = [-10, -24, -2, -3570, -4848]; //arr.length = 5;
+
+    function mostrarMaiorNumero(array){
+        var maiorNumero = arr[0];
+
+        for(var i = 0; i < array.length; i++){ //indice [0, 1, 2, 3, 4] tem que ser menor que arr.length (=5)
+            if(array[i] > maiorNumero){ //se o indice do array for maior que o maiorNumero,
+                maiorNumero = array[i]; //retorna o elemento do array
+            }
+        }
+        return maiorNumero;
+    };
+
+    console.log(mostrarMaiorNumero(arr));
+
+</script>
