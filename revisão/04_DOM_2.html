@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+        <script src="beluga.js"></script>
+
+    </head>
+    <body>
+        <h1>Javascript</h1>
+        <section>
+        	<div class="container">
+	        
+		      	<h2>Média dos alunos</h2>
+				<table class="table js-tabela">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Nota 1</th>
+							<th>Nota 2</th>
+							<th>Nota 3</th>
+							<th>Nota 4</th>
+							<th>Média</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="aluno" >
+							<td class="aluno-nome">Gertrude</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">9</td>
+							<td class="aluno-n4">7.5</td>	
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno" >
+							<td class="aluno-nome">Rey</td>
+							<td class="aluno-n1">5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">6.5</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno" >
+							<td class="aluno-nome">Jessilda</td>
+							<td class="aluno-n1">8</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">7</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno">
+							<td class="aluno-nome">Lindóia</td>
+							<td class="aluno-n1">6.5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+						<tr class="aluno" >
+							<td class="aluno-nome">Creysson</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">9.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">8.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+					</tbody>
+				</table>
+	        	
+        	</div>	
+        </section>
+
+        <script>      
+
+			(function(){
+				'use strict'
+
+				let trs = document.querySelectorAll('.aluno');
+
+				for(let x = 0; trs[x]; x++){
+					let codigoAluno  = trs[x];
+					console.log(codigoAluno);
+
+					let tds = codigoAluno.querySelectorAll('td');
+					let notas = soNumerosMedia(tds);
+					let media = calcularMedia.apply(this, notas); //calcular média vem do beluga.js
+
+					codigoAluno.querySelector('.aluno-m').textContent = media;
+				}
+
+				function soNumerosMedia(tds){
+					let arr = [];
+					for(let x = 0; tds[x]; x++){
+						if(!isNaN(tds[x].textContent) && tds[x].textContent !== ''){
+							arr.push(parseFloat(tds[x].textContent));
+						}
+					}
+					return arr; 
+				}
+			})()
+
+        </script>
+    </body>
+</html>

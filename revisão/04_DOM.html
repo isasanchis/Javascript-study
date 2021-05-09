@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+        <div id="msg"></div>
+
+        <script>          
+            (function(){
+                var nome = prompt('qual o seu nome?');
+                document.querySelector('#msg').innerHTML = "Bem vindo, "+ nome;
+            })()
+
+        </script>
+    </body>
+</html>

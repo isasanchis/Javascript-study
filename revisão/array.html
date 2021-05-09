@@ -1,0 +1,66 @@
+<script>
+    let vegetais = ['Repolho', 'Nabo', 'Rabanete', 'Cenoura'];
+
+    console.log(vegetais);
+
+    console.log(vegetais.length);
+
+    let numeros = [5, 7, 10, 20, 30, 40];
+
+    console.log(numeros.every(elem => elem >= 10));
+
+    function isBigEnough(value) {
+        return value >= 10;
+    }
+
+    console.log(numeros.filter(isBigEnough)); // passa uma função para filtrar o array
+
+    function logArrayElements(element, index) {
+        console.log("a[" + index + "] = " + element);
+    }
+
+    vegetais.forEach(logArrayElements); // passa uma função em cada elemento do array 
+
+    console.log(vegetais.indexOf('Rabanete'));
+    console.log(numeros.indexOf(30));
+
+    console.log(numeros.map(Math.sqrt)); // retorna um novo array, passando uma função como callback
+
+    console.log(numeros.some(isBigEnough)); // testa se ao menos um dos elementos no array passa no teste da função atribuída (true or false)
+
+    console.log(numeros.concat(vegetais));
+
+    console.log(numeros.join()); // transforma em string
+    console.log(vegetais.join('/'));
+
+    console.log(vegetais.pop());
+    console.log(numeros.pop());
+
+    console.log(vegetais.push());
+    console.log(vegetais);
+
+    console.log(numeros.push());
+    console.log(numeros);
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    console.log(numeros.reduce(reducer));
+
+    console.log(numeros.reduceRight(reducer));
+
+    console.log(vegetais.reverse());
+    console.log(numeros.reverse());
+
+    console.log(vegetais.shift());
+
+    console.log(vegetais.unshift('Brócolis'));
+    console.log(vegetais);
+
+    console.log(vegetais.toString());
+
+    console.log(vegetais.slice(2));
+
+    console.log(vegetais.splice(1, 1, 'Espinafre'));
+    console.log(vegetais)
+
+</script>

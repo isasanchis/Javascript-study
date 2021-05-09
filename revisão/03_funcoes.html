@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <h1>Javascript</h1>
+
+        <script>
+
+            // ECMA5:
+            function somar(n1, n2){
+                return n1 + n2;
+            }
+                var soma = somar(2, 3)
+                console.log(soma);
+
+            //ECMA6:
+            // const soma = (n1, n2) => n1 + n2;
+            // let resultado = soma(10, 20);
+            // console.log('Resultado da soma: ' + resultado);
+
+            somar.transformaEmStr = 'propriedade da funcao';
+
+            console.log(somar.transformaEmStr);
+
+
+            var funcaoAnonima = function(f){
+                f();
+            }
+
+            funcaoAnonima(function(){
+                console.log('função passada por parâmetro: função anônima');
+            });
+
+            function mostraX(){
+                var x = 0;
+                y = 1;
+                console.log(x, y);
+            }
+            mostraX();
+
+            (function(){
+                'use strict'; //evita criar uma variável global
+                
+                function somar(x){
+                    let result = 0;
+
+                    for(x = 0; arguments[x]; x++){
+                        result += arguments[x];
+                    }
+                    console.log('resultado é: '+ result);
+                }
+                somar(10, 20, 50, 50)
+
+            })()
+
+            function calculo(n1, n2){
+                return n1 * n2;
+            }
+            console.log(calculo(5, 5));
+            
+
+
+
+        </script>
+    </body>
+</html>
