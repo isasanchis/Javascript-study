@@ -1,0 +1,33 @@
+<script>
+
+    console.log(Date()); 
+    
+    // 1º de janeiro de 1970, data 0 no JS
+
+    // ms = 86400000
+
+    var d = new Date();
+
+    console.log(d.getDate()); // dia do mês atual
+    console.log(d.getDay()); // dia da semana -> Domingo = 0
+    console.log(d.getFullYear()); // ano atual
+    console.log(d.getHours()); // hora atual
+    console.log(d.getMilliseconds()); // ms atual
+    console.log(d.getMinutes()); // minuto atual
+    console.log(d.getMonth()); // mês atual (Janeiro é 0)
+    console.log(d.getSeconds()); // segundo atual
+    console.log(d.getTime()); // qtd de miliseconds desde 01/01/1970
+
+    d.setDate(15);
+    console.log(d);
+
+    // d.setDay();
+    // d.setFullYear();
+    // d.setHours();
+    // d.setMilliseconds();
+    // d.setMinutes();
+    // d.setMonth();
+    // d.setSeconds();
+    // d.setTime();
+
+</script>
